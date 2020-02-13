@@ -1,0 +1,1 @@
+export BLAA={{ (onepassword "g4gs3qebrrdt3kfttrd4qj7j2m").details.password }}
