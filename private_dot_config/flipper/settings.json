@@ -1,0 +1,16 @@
+{
+  "androidHome": "~/Library/Android/sdk",
+  "enableAndroid": true,
+  "enablePrefetching": 2,
+  "jsApps": {
+    "webAppLauncher": {
+      "url": "http://localhost:8888",
+      "height": 600,
+      "width": 800
+    }
+  },
+  "_persist": {
+    "version": -1,
+    "rehydrated": true
+  }
+}
