@@ -120,20 +120,21 @@ declaration) or dependency thereof that hasn't already been."
        (straight--make-package-modifications-available))
      (if-let (built
               (doom-with-package-recipes recipes (package local-repo)
-                ;; Ensure packages with outdated files/bytecode are rebuilt
-                (let ((build-dir (straight--build-dir package))
-                      (repo-dir  (straight--repos-dir local-repo)))
-                  (and (or (file-newer-than-file-p repo-dir build-dir)
-                           ;; Doesn't make sense to compare el and elc files
-                           ;; when the former isn't a symlink to their source.
-                           (when straight-use-symlinks
-                             (cl-loop for file
-                                      in (doom-files-in build-dir :match "\\.el$" :full t)
-                                      for elc-file = (byte-compile-dest-file file)
-                                      if (and (file-exists-p elc-file)
-                                              (file-newer-than-file-p file elc-file))
-                                      return t)))
-                       (puthash package t straight--packages-to-rebuild)))
+                (unless force-p
+                  ;; Ensure packages with outdated files/bytecode are rebuilt
+                  (let ((build-dir (straight--build-dir package))
+                        (repo-dir  (straight--repos-dir local-repo)))
+                    (and (or (file-newer-than-file-p repo-dir build-dir)
+                             ;; Doesn't make sense to compare el and elc files
+                             ;; when the former isn't a symlink to their source.
+                             (when straight-use-symlinks
+                               (cl-loop for file
+                                        in (doom-files-in build-dir :match "\\.el$" :full t)
+                                        for elc-file = (byte-compile-dest-file file)
+                                        if (and (file-exists-p elc-file)
+                                                (file-newer-than-file-p file elc-file))
+                                        return t)))
+                         (puthash package t straight--packages-to-rebuild))))
                 (straight-use-package (intern package))))
          (print! (success "Rebuilt %d package(s)") (length built))
        (print! (success "No packages need rebuilding"))
@@ -193,7 +194,7 @@ declaration) or dependency thereof that hasn't already been."
                          (setq output (doom--commit-log-between ref target-ref)))
                      (doom--same-commit-p target-ref (straight-vc-get-commit type local-repo)))
 
-                    ((print! (start "\033[K(%d/%d) Re-cloning %s...%s") i total local-repo esc)
+                    ((print! (start "\033[K(%d/%d) Re-cloning %s...") i total local-repo esc)
                      (let ((repo (straight--repos-dir local-repo)))
                        (ignore-errors
                          (delete-directory repo 'recursive))
@@ -211,8 +212,9 @@ declaration) or dependency thereof that hasn't already been."
                (puthash local-repo t repos-to-rebuild)
                (puthash package t packages-to-rebuild)
                (unless (string-empty-p output)
-                 (print-group! (print! (info "%s" output))))
-               (print! (success "(%d/%d) %s updated (%s -> %s)")
+                 (print! (start "\033[K(%d/%d) Updating %s...") i total local-repo)
+                 (print-group! (print! (indent 2 output))))
+               (print! (success "\033[K(%d/%d) %s updated (%s -> %s)")
                        i total local-repo
                        (doom--abbrev-commit ref)
                        (doom--abbrev-commit target-ref)))
@@ -270,7 +272,8 @@ declaration) or dependency thereof that hasn't already been."
       (straight--call "git" "clean" "-ffd")
       (if (not (car (straight--call "git" "replace" "--graft" "HEAD")))
           (print! (info "\033[Krepos/%s is already compact\033[1A" repo))
-        (straight--call "git" "gc")
+        (straight--call "git" "reflog" "expire" "--expire=all" "--all")
+        (straight--call "git" "gc" "--prune=now")
         (print! (success "\033[KRegrafted repos/%s (from %0.1fKB to %0.1fKB)")
                 repo before-size (doom-directory-size default-directory))
         (print-group! (print! "%s" (straight--process-get-output))))
