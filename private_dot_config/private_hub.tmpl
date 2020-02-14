@@ -1,0 +1,6 @@
+github.com:
+- user: pvinis
+  oauth_token: {{ if eq .chezmoi.hostname "cyan" -}}
+		{{ (onepassword "hub github token cyan").details.password }}
+	{{- end}}
+  protocol: https
