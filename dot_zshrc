@@ -60,6 +60,7 @@ alias c='code-insiders . || code .'
 alias cl='clear'
 alias at='adb shell input keyevent 82'
 alias git='hub'
+alias oplogin='eval $(op signin my)'
 
 # completion
 if type brew &>/dev/null; then
