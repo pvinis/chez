@@ -1,1 +1,17 @@
-{"autoLaunchInBackground":false,"runInBackground":true,"enableSystemTray":false,"minimizeToSystemTray":false,"showDisabledServices":true,"showMessageBadgeWhenMuted":true,"enableSpellchecking":false,"spellcheckerLanguage":"en-us","darkMode":true,"locale":"en-US","fallbackLocale":"en-US","beta":true,"isAppMuted":false,"enableGPUAcceleration":true,"serviceLimit":5}
+{
+  "autoLaunchInBackground": false,
+  "runInBackground": true,
+  "enableSystemTray": false,
+  "minimizeToSystemTray": false,
+  "showDisabledServices": true,
+  "showMessageBadgeWhenMuted": true,
+  "enableSpellchecking": false,
+  "spellcheckerLanguage": "en-us",
+  "darkMode": false,
+  "locale": "en-US",
+  "fallbackLocale": "en-US",
+  "beta": true,
+  "isAppMuted": false,
+  "enableGPUAcceleration": true,
+  "serviceLimit": 5
+}

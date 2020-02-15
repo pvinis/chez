@@ -7,7 +7,6 @@ brew "mas"
 
 # base
 brew "git"
-brew "git-crypt"
 brew "asdf"
 
 # shell
@@ -38,6 +37,7 @@ mas "xcode", id: 497799835
 
 
 cask "visual-studio-code"
+#cask "react-native-debugger"
 #cask "docker"
 
 ## react native

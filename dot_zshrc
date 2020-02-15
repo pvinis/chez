@@ -38,6 +38,7 @@ alias krn='kport 8081'
 alias rmf='rm -rf'
 
 alias fixmonitorshit='displayplacer "id:A0E7CA20-2BD5-5E54-3CAC-9FB8238C6731 res:1440x2560 hz:60 color_depth:8 scaling:off origin:(0,0) degree:90" "id:5EB29A81-68C7-A5BD-87DD-7ED2AA7DAD80 res:1440x900 color_depth:4 scaling:on origin:(1440,1772) degree:0" "id:888A2502-306B-FEE9-3AAA-5DBE91CED531 res:1440x2560 hz:59 color_depth:8 scaling:off origin:(-1440,0) degree:90"'
+alias che='chezmoi'
 
 upgradeall() {
 	brew update
@@ -54,9 +55,8 @@ cleanupall() {
 }
 
 # aliases
-
 alias f='fork'
-alias c='code-insiders . || code .'
+alias c='code . || code-insiders .'
 alias cl='clear'
 alias at='adb shell input keyevent 82'
 alias git='hub'
@@ -155,7 +155,7 @@ unsetopt nomatch
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-export EDITOR="code-insiders"
+export EDITOR=code
 
 autoload -U edit-command-line
 zle -N edit-command-line
