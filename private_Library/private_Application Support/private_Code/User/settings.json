@@ -25,7 +25,7 @@
 	"editor.detectIndentation": true,
 	"editor.minimap.enabled": true,
 	"editor.minimap.renderCharacters": false,
-	"editor.fontFamily": "Iosevka, SF Mono, Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontFamily": "Iosevka, jetbrains mono, SF Mono, Menlo, Monaco, 'Courier New', monospace",
 	"npm.enableScriptExplorer": true,
 	"workbench.activityBar.visible": true,
 	"workbench.sideBar.location": "right",
@@ -114,4 +114,5 @@
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true
 	},
+	"explorer.confirmDelete": false,
 }
