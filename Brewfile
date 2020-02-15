@@ -7,19 +7,15 @@ brew "mas"
 
 # base
 brew "git"
-brew "asdf"
+brew "asdf" # awesome ruby python node yarn version manager
 
 # shell
 brew "zsh"
 brew "thefuck"
 brew "trash"
 
-# brew "ag"
-#brew "fzf"
-
-# ruby
-brew "chruby"
-brew "ruby-install"
+brew "ag"
+brew "fzf"
 
 # brew "yarn", args: ["without-node"]
 brew "nodenv"
@@ -29,15 +25,12 @@ cask "keepingyouawake"
 
 # messaging
 cask "franz"
-#cask "rambox"
 
 # dev
 
 mas "xcode", id: 497799835
 
-
 cask "visual-studio-code"
-#cask "react-native-debugger"
 #cask "docker"
 
 ## react native
@@ -46,25 +39,21 @@ cask "reactotron"
 brew "watchman"
 
 cask "webtorrent"
-#cask "teamviewer"
 cask "save-hollywood"
-#cask "postman"
 
 cask "the-unarchiver"
-
 
 #cask "arq"
 cask "skype"
 cask "spotify"
 cask "steam"
 cask "vlc"
-#cask "tunnelblick"
+cask "tunnelblick"
 cask "dropbox-beta"
-#cask "firefox-beta"
-#cask "google-chrome-beta"
+cask "firefox-beta"
 cask "1password-beta"
 cask "airmail-beta"
-#cask "iterm2-nightly"
+cask "iterm2-nightly"
 #cask "vnc-viewer"
 
 # fonts
@@ -79,9 +68,6 @@ cask "font-source-sans-pro"
 # mas
 mas "paste", id: 967805235
 mas "magnet", id: 441258766
-
-
-
 
 tap "devhubapp/devhub"
 tap "getsentry/tools"
@@ -101,43 +87,20 @@ brew "automake"
 brew "coreutils"
 brew "libyaml"
 brew "aspell"
-brew "avrdude"
 brew "bison"
-brew "boost"
-brew "boost-python"
 brew "brew-gem"
 brew "bugsnag-dsym-upload"
-brew "libffi"
-brew "python"
-brew "chruby"
 brew "chunkwm"
-brew "clang-format"
 brew "cliclick"
-brew "cmake"
-brew "curl"
-brew "dfu-programmer"
-brew "dfu-util"
-brew "findutils"
-brew "fzf"
-brew "gawk"
-brew "gem-doing"
-brew "gnu-sed"
-brew "gnu-tar"
-brew "gnutls"
-brew "graphviz"
-brew "httpie"
 brew "hub"
 brew "imagemagick"
 brew "ios-deploy"
 brew "ipfs"
 brew "jq"
 brew "kakoune"
-brew "librsvg"
-brew "libssh2"
 brew "mosh"
 brew "neovim"
 brew "nodenv"
-brew "paperkey"
 brew "proselint"
 brew "qrencode"
 brew "sdl2"
@@ -172,8 +135,6 @@ cask "dozer"
 cask "dropbox-beta"
 cask "emacs-mac"
 cask "firefox-beta"
-cask "firefox-developer-edition"
-cask "firefox-nightly"
 cask "flipper"
 cask "flux"
 cask "fork"
