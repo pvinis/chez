@@ -3,7 +3,6 @@
 	"editor.fontSize": 16,
 	"editor.lineNumbers": "off",
 	"editor.renderIndentGuides": false,
-	"workbench.colorTheme": "Base16 Dark Eighties",
 	"files.insertFinalNewline": true,
 	"files.associations": {
 		"Fastfile": "ruby",
@@ -115,4 +114,7 @@
 		"source.fixAll.eslint": true
 	},
 	"explorer.confirmDelete": false,
+	"window.autoDetectColorScheme": true,
+	"workbench.preferredDarkColorTheme": "Base16 Dark Eighties",
+	"workbench.preferredLightColorTheme": "Base16 Light Tomorrow",
 }
