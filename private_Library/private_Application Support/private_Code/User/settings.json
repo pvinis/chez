@@ -114,7 +114,8 @@
 		"source.fixAll.eslint": true
 	},
 	"explorer.confirmDelete": false,
-	"window.autoDetectColorScheme": true,
 	"workbench.preferredDarkColorTheme": "Base16 Dark Eighties",
 	"workbench.preferredLightColorTheme": "Base16 Light Tomorrow",
+	"workbench.colorTheme": "Base16 Light Tomorrow",
+	"window.autoDetectColorScheme": true,
 }
