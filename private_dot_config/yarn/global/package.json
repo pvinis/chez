@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "expo-cli": "*",
+    "gatsby-cli": "*",
     "nps": "*",
     "ynpx": "*"
   }

@@ -33,6 +33,10 @@ kport() {
     lsof -t -i :$1 | xargs kill
 }
 
+srt() {
+	~/Source/pvinis/p0lco-shortener/node_modules/.bin/netlify-shortener "$1" "$2"
+}
+
 alias krn='kport 8081'
 
 alias rmf='rm -rf'
