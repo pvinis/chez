@@ -77,7 +77,7 @@ compinit
 # setup asdf
 # $(brew --prefix asdf) = /usr/local/opt/asdf
 . /usr/local/opt/asdf/asdf.sh
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+# . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
 # no args: git status
 # with args: git `args`
