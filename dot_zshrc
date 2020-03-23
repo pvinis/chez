@@ -1,3 +1,26 @@
+# zinit init
+source "$HOME/.zshrc_zinitcheck"    # check if zinit exists, otherwise download it
+source "$HOME/.zinit/bin/zinit.zsh" # load zinit
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-bin-gem-node
+# zinit init done
+
+
+zinit load willghatch/zsh-saneopt # some sane options
+
+
+zinit load zsh-users/zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up   # up arrow
+bindkey '^[[B' history-substring-search-down # down arrow
+
+
 [ -s "$HOME/.zshrc_private" ] && source $HOME/.zshrc_private
 [ -s "$HOME/.zshrc_local" ] && source $HOME/.zshrc_local
 
@@ -14,7 +37,6 @@ export GPG_TTY=$(tty)
 
 # extra paths
 export PATH="$HOME/.fastlane/bin:$PATH"
-export PATH="/Users/pvinis/Library/Python/3.7/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -66,6 +88,7 @@ alias cl='clear'
 alias at='adb shell input keyevent 82'
 alias git='hub'
 alias oplogin='eval $(op signin my)'
+alias zupd='zinit self-update'
 
 # completion
 if type brew &>/dev/null; then
@@ -80,16 +103,6 @@ compinit
 . /usr/local/opt/asdf/asdf.sh
 # . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
-# no args: git status
-# with args: git `args`
-g() {
-	if [[ $# -gt 0 ]]; then
-		git "$@"
-	else
-		git status
-	fi
-}
-compdef g=git
 
 # no args: open .
 # with args: open `args`
@@ -100,7 +113,7 @@ o() {
 		open .
 	fi
 }
-compdef g=git
+
 
 # modify the prompt to contain git branch name if applicable
 git_prompt_info() {
@@ -109,8 +122,6 @@ git_prompt_info() {
     echo " %{$fg_bold[green]%}$current_branch%{$reset_color%}"
   fi
 }
-
-setopt promptsubst
 
 # Allow exported PS1 variable to override default prompt.
 if ! env | grep -q '^PS1='; then
@@ -134,31 +145,12 @@ SAVEHIST=4096
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 bindkey -v
-# bindkey "^F" vi-cmd-mode
-
-
-# handy keybindings
-# bindkey "^A" beginning-of-line
-# bindkey "^E" end-of-line
-# bindkey "^K" kill-line
-# bindkey "^R" history-incremental-search-backward
-# bindkey "^P" history-search-backward
-# bindkey "^Y" accept-and-hold
-# bindkey "^N" insert-last-word
-# bindkey "^Q" push-line-or-edit
 
 bindkey -s "^T" "^[Isudo ^[A" # t for toughguy
-
-# awesome cd movements
-setopt autocd autopushd pushdminus pushdsilent pushdtohome cdablevars
-DIRSTACKSIZE=5
 
 setopt extendedglob
 
 unsetopt nomatch
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 export EDITOR=code
 
