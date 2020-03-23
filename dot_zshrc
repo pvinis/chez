@@ -142,12 +142,7 @@ HISTFILE=~/.zhistory
 HISTSIZE=4096
 SAVEHIST=4096
 
-export ERL_AFLAGS="-kernel shell_history enabled"
-
 bindkey -v
-
-bindkey -s "^T" "^[Isudo ^[A" # t for toughguy
-
 setopt extendedglob
 
 unsetopt nomatch
