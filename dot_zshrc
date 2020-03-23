@@ -16,6 +16,8 @@ zinit light-mode for \
 zinit load willghatch/zsh-saneopt # some sane options
 
 
+zinit snippet OMZ::plugins/asdf/asdf.plugin.zsh
+
 zinit load zsh-users/zsh-history-substring-search
 bindkey '^[[A' history-substring-search-up   # up arrow
 bindkey '^[[B' history-substring-search-down # down arrow
@@ -97,12 +99,6 @@ fi
 
 autoload -Uz compinit
 compinit
-
-# setup asdf
-# $(brew --prefix asdf) = /usr/local/opt/asdf
-. /usr/local/opt/asdf/asdf.sh
-# . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
-
 
 # no args: open .
 # with args: open `args`
