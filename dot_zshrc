@@ -15,8 +15,20 @@ zinit light-mode for \
 
 zinit load willghatch/zsh-saneopt # some sane options
 
+# zinit ice silent wait:1 atload:_zsh_autosuggest_start
+# zinit load zsh-users/zsh-autosuggestions
+
+# zinit ice blockf
+# zinit load zsh-users/zsh-completions
+
+autoload bashcompinit
+bashcompinit
 
 zinit snippet OMZ::plugins/asdf/asdf.plugin.zsh
+
+zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
+
+zinit snippet OMZ::plugins/mosh/mosh.plugin.zsh
 
 zinit load zsh-users/zsh-history-substring-search
 bindkey '^[[A' history-substring-search-up   # up arrow
