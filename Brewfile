@@ -17,8 +17,6 @@ brew "trash"
 brew "ag"
 brew "fzf"
 
-# brew "yarn", args: ["without-node"]
-brew "nodenv"
 brew "colortools"
 
 cask "keepingyouawake"
