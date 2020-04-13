@@ -4,5 +4,7 @@ github.com:
 		{{ (onepassword "hub github token cyan").details.password }}
 	{{- else if eq .chezmoi.hostname "royal-purple" -}}
 		{{ (onepassword "hub github token royal-purple").details.password }}
+	{{- else if eq .chezmoi.hostname "lavender" -}}
+		{{ (onepassword "github hub token lavender").details.password }}
 	{{- end }}
   protocol: https
