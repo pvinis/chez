@@ -19,25 +19,12 @@ brew "fzf"
 
 brew "colortools"
 
-cask "keepingyouawake"
 
-# messaging
-cask "franz"
-
-# dev
-
-mas "xcode", id: 497799835
-
-cask "visual-studio-code"
-#cask "docker"
+cask "docker"
 
 ## react native
-cask "react-native-debugger"
-cask "reactotron"
 brew "watchman"
 
-cask "webtorrent"
-cask "save-hollywood"
 
 cask "the-unarchiver"
 

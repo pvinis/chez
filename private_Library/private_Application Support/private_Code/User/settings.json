@@ -115,11 +115,10 @@
     },
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/local/bin/nvim",
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "sync.autoUpload": true,
-    "sync.autoDownload": true,
+    "sync.gist": "c2d279eacd8cbc058a81e3d3444a1b16",
     "sync.removeExtensions": false,
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
     "sync.forceUpload": false,
+    "sync.quietSync": false,
 }

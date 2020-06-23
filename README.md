@@ -1,17 +1,29 @@
 # pvinis dotfiles, handled by chezmoi
 
-- get password from "password" type
+## Secrets
+
+### Read from 1password
+`op get item "pear known data" |jq`
+
+### Get password in `.tmpl` files
+
+- from "password" type
 ```
-export HOMEBREW_GITHUB_API_TOKEN={{ (onepassword "jct5fvvcmjdutdb4vmpep3s3zq").details.password }}
+export HOMEBREW_GITHUB_API_TOKEN={{ (onepassword "jcvvcmjdutdbvmpep3zq").details.password }}
 ```
 
-- get password from "login type"
+- from "login" type
 ```
-export HOMEBREW_GITHUB_API_TOKEN={{ range (onepassword "jct5fvvcmjdutdb4vmpep3s3zq").details.fields -}}
+export HOMEBREW_GITHUB_API_TOKEN={{ range (onepassword "jcfvvjdutd4vmpep3s3z").details.fields -}}
   {{ if eq .name "password" }}
     {{ .value }}
   {{ end }}
 {{- end }}
+```
+
+- from "note" type
+```
+{{ (onepassword "pear known data").details.notesPlain }}
 ```
 
 ## TODO
