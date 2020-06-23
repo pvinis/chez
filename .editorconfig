@@ -1,2 +1,2 @@
-[settings.json]
-indent_style = space
+[*.json]
+indent_style = tab
