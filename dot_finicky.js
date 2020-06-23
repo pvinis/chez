@@ -7,7 +7,3 @@ module.exports = {
 	  },
 	]
 }
-
-
-// https://google.com
-// https://apple.com
