@@ -26,6 +26,8 @@ bashcompinit
 
 zinit snippet OMZ::plugins/asdf/asdf.plugin.zsh
 
+. ~/.asdf/plugins/java/set-java-home.zsh
+
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 
 zinit snippet OMZ::plugins/mosh/mosh.plugin.zsh
@@ -51,6 +53,7 @@ export GPG_TTY=$(tty)
 
 # extra paths
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -73,6 +76,15 @@ kport() {
 srt() {
 	~/Source/pvinis/p0lco-shortener/node_modules/.bin/netlify-shortener "$1" "$2"
 }
+
+pearadd() {
+	pear known | jq '.[] | "\(.username) - \(.name) - \(.email)"' | fzf | awk '{ print substr($1, 2) }' | xargs pear current:add
+}
+pearcur() {
+	pear current | jq '.[] | "\(.username) - \(.name) - \(.email)"'
+}
+alias peardel='pear current:clear'
+alias peargit='pear current:trailer | pbcopy'
 
 alias krn='kport 8081'
 
