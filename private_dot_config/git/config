@@ -28,3 +28,6 @@
 	user = pvinis
 [diff "nodiff"]
 	command = true
+[status]
+	showUntrackedFiles = all
+

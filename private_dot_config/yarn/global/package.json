@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "@jonallured/pear": "*",
     "expo-cli": "*",
     "gatsby-cli": "*",
+    "nodemon": "*",
     "nps": "*",
     "ynpx": "*"
   }
