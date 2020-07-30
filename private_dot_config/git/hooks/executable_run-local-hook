@@ -1,0 +1,5 @@
+hookname="$1"
+
+# run the local hook too if it exists
+echo "$PWD/.git/hooks/$hookname"
+[ -x "$PWD/.git/hooks/$hookname" ] && "$PWD/.git/hooks/$hookname" || true # bash-style ternary

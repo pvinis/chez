@@ -31,3 +31,7 @@
 [status]
 	showUntrackedFiles = all
 
+[gpg]
+	program = gpg
+[core]
+	hooksPath = /Users/pavlos/.config/git/hooks
