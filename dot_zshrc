@@ -77,6 +77,10 @@ srt() {
 	~/Source/pvinis/p0lco-shortener/node_modules/.bin/netlify-shortener "$1" "$2"
 }
 
+jobdone() {
+  say done -v Samantha && unicornlean -s 1.5
+}
+
 pearadd() {
 	pear known | jq '.[] | "\(.username) - \(.name) - \(.email)"' | fzf | awk '{ print substr($1, 2) }' | xargs pear current:add
 }
@@ -112,7 +116,7 @@ cleanupall() {
 alias f='fork'
 alias c='code . || code-insiders .'
 alias cl='clear'
-alias at='adb shell input keyevent 82'
+alias andt='adb shell input keyevent 82'
 alias git='hub'
 alias oplogin='eval $(op signin my)'
 alias zupd='zinit self-update'
