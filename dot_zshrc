@@ -1,48 +1,18 @@
-# zinit init
+# zinit start
 source "$HOME/.zshrc_zinitcheck"    # check if zinit exists, otherwise download it
-source "$HOME/.zinit/bin/zinit.zsh" # load zinit
+
+source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
-    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-rust \
     zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node
-# zinit init done
-
-
-zinit load willghatch/zsh-saneopt # some sane options
-
-# zinit ice silent wait:1 atload:_zsh_autosuggest_start
-# zinit load zsh-users/zsh-autosuggestions
-
-# zinit ice blockf
-# zinit load zsh-users/zsh-completions
-
-autoload bashcompinit
-bashcompinit
-
-zinit snippet OMZ::plugins/asdf/asdf.plugin.zsh
-
-. ~/.asdf/plugins/java/set-java-home.zsh
-
-zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
-
-zinit snippet OMZ::plugins/mosh/mosh.plugin.zsh
-
-zinit load zsh-users/zsh-history-substring-search
-bindkey '^[[A' history-substring-search-up   # up arrow
-bindkey '^[[B' history-substring-search-down # down arrow
-
-
-[ -s "$HOME/.zshrc_private" ] && source $HOME/.zshrc_private
-[ -s "$HOME/.zshrc_local" ] && source $HOME/.zshrc_local
-
-BASE16_SHELL=$HOME/.config/base16-shell
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-base16_eighties
+# zinit end
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -57,9 +27,14 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/Source/contrib/incontext:$PATH"
 
 
 export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 
 # other
@@ -78,7 +53,7 @@ srt() {
 }
 
 jobdone() {
-  say done -v Samantha && unicornlean -s 1.5
+  say done -v Samantha && unicornleap -s 1.5
 }
 
 pearadd() {
@@ -101,7 +76,6 @@ alias chepull='che update --apply=false'
 upgradeall() {
 	brew update
 	brew upgrade
-	brew cask upgrade
 }
 
 cleanupall() {
@@ -115,19 +89,14 @@ cleanupall() {
 # aliases
 alias f='fork'
 alias c='code . || code-insiders .'
+alias fc='fork && code .'
 alias cl='clear'
 alias andt='adb shell input keyevent 82'
 alias git='hub'
+alias ox='open-xcode-project'
 alias oplogin='eval $(op signin my)'
 alias zupd='zinit self-update'
-
-# completion
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-fi
-
-autoload -Uz compinit
-compinit
+alias lsd='ls | lolcat'
 
 # no args: open .
 # with args: open `args`
@@ -139,7 +108,6 @@ o() {
 	fi
 }
 
-
 # modify the prompt to contain git branch name if applicable
 git_prompt_info() {
   current_branch=$(git current-branch 2> /dev/null)
@@ -148,6 +116,38 @@ git_prompt_info() {
   fi
 }
 
+# Taken from: https://github.com/pndurette/zsh-lux
+# macos_is_dark: check if the dark mode in macOS is active
+# * Returns:
+# *  0 if dark mode is active
+# *  1 if light mode is active
+# *  2 if the status of the dark mode can't be determined
+#    (i.e. the version of macOS does not support it)
+
+function macos_is_dark() {
+    local dark_mode=$(osascript -l JavaScript -e \
+        "Application('System Events').appearancePreferences.darkMode.get()")
+
+    # _lux_log "fct: $funcstack[1]" "dark mode? $dark_mode"
+
+    if   [[ "$dark_mode" == "true" ]];  then return 0
+    elif [[ "$dark_mode" == "false" ]]; then return 1
+    else
+        # _lux_log "can't get macOS dark mode status."
+        return 2
+    fi
+}
+
+
+
+BASE16_SHELL=$HOME/.config/base16-shell
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+if macos_is_dark; then
+	base16_tomorrow-night-eighties
+else
+	base16_tomorrow
+fi
+
 # Allow exported PS1 variable to override default prompt.
 if ! env | grep -q '^PS1='; then
   PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_prompt_info) %# '
@@ -155,11 +155,14 @@ fi
 PROMPT='%B%F{%(?.green.red)}┌──[%(?.. %?) %b%F{white}%~
 %B%F└──>%b%f '
 
-# makes color constants available
-autoload -U colors
-colors
-# enable colored output from ls
-export CLICOLOR=1
+# for ruby-build, to find the brew openssl
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+# export EDITOR=code
+export EDITOR=nvim
+export GIT_EDITOR=nvim
+
+eval "$(direnv hook zsh)"
 
 # history
 setopt hist_ignore_all_dups inc_append_history
@@ -167,13 +170,74 @@ HISTFILE=~/.zhistory
 HISTSIZE=4096
 SAVEHIST=4096
 
-bindkey -v
-setopt extendedglob
+zinit load willghatch/zsh-saneopt # some sane options
 
-unsetopt nomatch
+zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 
-export EDITOR=code
+# zinit ice silent wait:1 atload:_zsh_autosuggest_start
+zinit load zsh-users/zsh-autosuggestions
+zinit light zdharma/fast-syntax-highlighting
+
+# zinit ice blockf
+zinit load zsh-users/zsh-completions
 
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^x^x' edit-command-line
+
+
+
+
+
+
+
+zinit light zsh-users/zsh-completions
+
+# zinit ice atload"zpcdreplay" atclone'./zplug.zsh'
+# zinit light g-plane/zsh-yarn-autocompletions
+
+autoload bashcompinit
+bashcompinit
+
+zinit snippet OMZ::plugins/asdf/asdf.plugin.zsh
+. ~/.asdf/plugins/java/set-java-home.zsh
+
+
+zinit snippet OMZ::plugins/mosh/mosh.plugin.zsh
+
+
+
+
+
+bindkey -v
+
+
+
+
+
+zinit load zsh-users/zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up   # up arrow
+bindkey '^[[B' history-substring-search-down # down arrow
+
+# completion
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
+autoload -Uz compinit
+compinit
+
+
+# makes color constants available
+autoload -U colors
+colors
+
+# enable colored output from ls
+export CLICOLOR=1
+
+setopt extendedglob
+
+# unsetopt nomatch
+
+[ -s "$HOME/.zshrc_private" ] && source $HOME/.zshrc_private || true
+[ -s "$HOME/.zshrc_local" ] && source $HOME/.zshrc_local || true
