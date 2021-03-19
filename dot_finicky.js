@@ -1,9 +1,9 @@
 module.exports = {
-	defaultBrowser: "Firefox",
+	defaultBrowser: 'Firefox',
 	handlers: [
 	  {
-		match: finicky.matchHostnames(["meet.google.com"]),
-		browser: "Google Chrome"
+		match: /meet.google.com/,
+		browser: 'Google Chrome',
 	  },
-	]
+	],
 }
