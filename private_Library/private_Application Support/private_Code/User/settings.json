@@ -1,77 +1,14 @@
 {
-	"editor.fontLigatures": true,
-	"editor.fontSize": 16,
-	"editor.lineNumbers": "off",
-	"editor.renderIndentGuides": false,
-	"files.insertFinalNewline": true,
-	"files.associations": {
-		"Fastfile": "ruby",
-		"Gemfile": "ruby",
-		"Pluginfile": "ruby",
-		".solidarity": "json5"
-	},
-	"eslint.enable": true,
-	"eslint.packageManager": "yarn",
-	"eslint.validate": [
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact",
-		"markdown",
-		"markdownreact"
-	],
-	"editor.detectIndentation": true,
-	"editor.minimap.enabled": true,
-	"editor.minimap.renderCharacters": false,
-	"editor.fontFamily": "Iosevka, SF Mono, Menlo, Monaco, 'Courier New', monospace",
-	"npm.enableScriptExplorer": true,
-	"workbench.activityBar.visible": true,
-	"workbench.sideBar.location": "right",
-	"prettifySymbolsMode.substitutions": [
-		{
-			"language": [
-				"typescript",
-				{
-					"pattern": "**/*.ts[x]"
-				}
-			],
-			"revealOn": "selection",
-			"substitutions": [
-				{
-					"ugly": ";",
-					"post": "$",
-					"pretty": " "
-				}
-			]
-		}
-	],
-	"workbench.startupEditor": "newUntitledFile",
-	"explorer.confirmDragAndDrop": false,
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"typescript.updateImportsOnFileMove.enabled": "always",
-	"editor.suggestSelection": "first",
-	"window.zoomLevel": 0,
-	"editor.insertSpaces": false,
-	"prettier.bracketSpacing": false,
-	"workbench.colorCustomizations": {},
-	"emmet.showExpandedAbbreviation": "never",
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
-	},
-	"vim.enableNeovim": true,
-	"vim.neovimPath": "/usr/local/bin/nvim",
-	"sync.gist": "c2d279eacd8cbc058a81e3d3444a1b16",
-	"sync.removeExtensions": false,
-	"sync.autoDownload": true,
-	"sync.autoUpload": true,
-	"sync.forceUpload": false,
-	"sync.quietSync": false,
-	"workbench.colorTheme": "Base16 Light Tomorrow",
-	"window.autoDetectColorScheme": true,
-	"workbench.preferredLightColorTheme": "Base16 Light Tomorrow",
-	"workbench.preferredDarkColorTheme": "Base16 Dark Eighties",
-	"ruby.rubocop.useBundler": true,
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
+    "editor.accessibilitySupport": "off",
+    "editor.fontFamily": "Iosevka, SF Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "workbench.sideBar.location": "right",
+
+    "files.associations": {
+        "Pluginfile": "ruby",
+    },
 }
+
