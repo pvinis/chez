@@ -9,15 +9,15 @@
 
 - from "password" type
 ```
-export HOMEBREW_GITHUB_API_TOKEN={{ (onepassword "jcvvcmjdutdbvmpep3zq").details.password }}
+export HOMEBREW_GITHUB_API_TOKEN={{ (onepassword "jcvvcmjdutdbvmpep3zq" "" "my").details.password }}
 ```
 
 - from "login" type
 ```
-export HOMEBREW_GITHUB_API_TOKEN={{ range (onepassword "jcfvvjdutd4vmpep3s3z").details.fields -}}
-  {{ if eq .name "password" }}
+export HOMEBREW_GITHUB_API_TOKEN={{ range (onepassword "jcfvvjdutd4vmpep3s3z" "" "my").details.fields -}}
+  {{ if eq .name "password" -}}
     {{ .value }}
-  {{ end }}
+  {{- end }}
 {{- end }}
 ```
 
