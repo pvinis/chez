@@ -28,6 +28,7 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$HOME/Source/contrib/incontext:$PATH"
+export PATH="$HOME/.emacs.d/bin:$PATH"
 
 
 export ANDROID_HOME="$HOME/Library/Android/sdk"
@@ -36,13 +37,14 @@ export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/tools/bin"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
+export RUBYOPT="-W0"
 
 # other
-fuck() { # lazy load fuck
-    unset -f fuck
+# fuck() { # lazy load fuck
+    # unset -f fuck
     eval $(thefuck --alias)
-    fuck "$@"
-}
+    # fuck "$@"
+# }
 
 kport() {
     lsof -t -i :$1 | xargs kill
@@ -95,6 +97,7 @@ alias andt='adb shell input keyevent 82'
 alias git='hub'
 alias ox='open-xcode-project'
 alias oplogin='eval $(op signin my)'
+alias oploginartsy='eval $(op signin team_artsy)'
 alias zupd='zinit self-update'
 alias lsd='ls | lolcat'
 
@@ -159,8 +162,8 @@ PROMPT='%B%F{%(?.green.red)}┌──[%(?.. %?) %b%F{white}%~
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 # export EDITOR=code
-export EDITOR=nvim
-export GIT_EDITOR=nvim
+# # export EDITOR=nvim
+# export GIT_EDITOR=nvim
 
 eval "$(direnv hook zsh)"
 
@@ -241,3 +244,10 @@ setopt extendedglob
 
 [ -s "$HOME/.zshrc_private" ] && source $HOME/.zshrc_private || true
 [ -s "$HOME/.zshrc_local" ] && source $HOME/.zshrc_local || true
+
+
+#### FIG ENV VARIABLES ####
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
+
+

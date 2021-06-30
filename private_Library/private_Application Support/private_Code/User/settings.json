@@ -5,10 +5,13 @@
     "editor.fontLigatures": true,
     "editor.minimap.enabled": true,
     "editor.minimap.renderCharacters": false,
+    // "editor.rulers": [80],
     "workbench.sideBar.location": "right",
-
     "files.associations": {
         "Pluginfile": "ruby",
     },
+    "markdown.extension.toc.unorderedList.marker": "*",
+    "markdown.extension.toc.levels": "2..3",
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/local/bin/nvim",
 }
-
