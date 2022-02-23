@@ -1,6 +1,7 @@
-nodejs 14.17.1
+nodejs 16.10.0
 ruby 2.7.2
 yarn 1.22.10
-python 3.8.0
+python 3.9.10
 golang 1.16
-java adopt-openjdk-8u252-b09.1
+java adoptopenjdk-11.0.14+101
+rust 1.54.0

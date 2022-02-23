@@ -1,5 +1,9 @@
 #!/usr/bin/osascript -l JavaScript
 
+
+// Controls Spotify from cli
+
+
 function run(input, parameters) {
 	const spotify = Application('Spotify')
 

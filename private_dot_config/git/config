@@ -6,6 +6,7 @@
 
 [pull]
 	ff = true
+	twohead = ort
 
 [fetch]
 	prune = true
@@ -39,5 +40,17 @@
 	program = gpg
 [core]
 	hooksPath = /Users/pavlos/.config/git/hooks
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [init]
-	defaultBranch = master
+	defaultBranch = main
+[remote "origin"]
+	tagopt = --tags
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
