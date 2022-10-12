@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-
-# opens up private notes
-
-
-code ~/Cloud/everywhere/notes
