@@ -5,11 +5,12 @@
 	name = Pavlos Vinieratos
 	email = pvinis@gmail.com
 
+[init]
+	defaultBranch = main
+
 [diff "plist"]
 	textconv = "plutil -convert xml1 -o -"
 
-[init]
-	defaultBranch = main
 
 [hub]
 	protocol = ssh
