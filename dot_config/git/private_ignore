@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# node
+**/node_modules/*
+
+## xcode User settings
+**/xcuserdata/*
+
+## app packaging
+**/*.ipa
+**/*.dSYM.zip
+**/*.dSYM
+
+# fastlane
+**/fastlane/report.xml
+
+# eslint
+.eslintcache
+
+# but keep these (useful for keeping empty folders)
+# keep this last!
+!.gitkeep
