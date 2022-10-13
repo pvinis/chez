@@ -1,0 +1,3 @@
+[diff "plist"]
+	textconv = "plutil -convert xml1 -o -"
+
