@@ -5,5 +5,5 @@ hyper - 4 : ~/.bin/spotify-ctl muteunmute
 hyper - 5 : ~/.bin/spotify-ctl volup
 hyper - 6 : ~/.bin/spotify-ctl voldown
 hyper - 7 : ~/.bin/nvd
-hyper - 8 : ~/.bin/priv_show-the-roro
+hyper - 8 : ~/.bin/show-the-roro
 # hyper - 9 is taken by the Keyboard Shortcuts on macos for the Start Screen Saver service. maybe i can replace it with a script or osascript or something?
