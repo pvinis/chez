@@ -1,0 +1,40 @@
+#!/usr/bin/env deno run --allow-run
+
+import { exec, OutputMode } from "https://deno.land/x/exec/mod.ts";
+
+const openItAndExit = async (file) => {
+  console.log(`Opening ${file}`);
+  await exec(`open ${file}`);
+  Deno.exit(0);
+};
+
+const figureOutWhichFileToOpen = async (files) => {
+  if (files.length === 1) {
+    // found, open it
+    await openItAndExit(files[0]);
+  } else if (files.length > 1) {
+    // found many, open first one
+    console.log(`Found ${files.length}:`);
+    files.map((file) => console.log(file));
+    await openItAndExit(files[0]);
+  }
+};
+
+const getFoundFiles = async (name) => {
+  const root = Deno.args[0] ?? ".";
+  const findCmd = `find ${root} -name "${name}" ! -path "*/node_modules/*" ! -path "*/Pods/*" -maxdepth 3`;
+
+  const output = (await exec(findCmd, { output: OutputMode.Capture })).output;
+  return output
+    .split("\n") // split lines
+    .filter((file) => file !== ""); // remove empty string
+};
+
+let files = await getFoundFiles("*.xcworkspace");
+await figureOutWhichFileToOpen(files);
+
+// no xcworkspace, look for xcodeproj
+files = await getFoundFiles("*.xcodeproj");
+await figureOutWhichFileToOpen(files);
+
+console.log("No Xcode files found");

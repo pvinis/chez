@@ -1,0 +1,7 @@
+ID_AND_NAME=$(jira sprint list --current --plain | choose -f "\t" 1:2 | fzf)
+ID=$(echo "$ID_AND_NAME" | choose 0)
+NAME=$(echo "$ID_AND_NAME" | choose 1: | tr " " "-")
+
+git switch main
+git pull
+git checkout -b pvinis/$NAME-$ID
