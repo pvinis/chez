@@ -1,0 +1,17 @@
+[include]
+	path = config_local
+
+[user]
+	name = Pavlos Vinieratos
+	email = pvinis@gmail.com
+
+[init]
+	defaultBranch = main
+
+[diff "plist"]
+	textconv = "plutil -convert xml1 -o -"
+
+
+[hub]
+	protocol = ssh
+

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euxo pipefail
+
+
+# creates a new note for today and opens it
+
+
+touch ~/Cloud/everywhere/notes/logs/$(date +%Y-%m-%d.md)
+code ~/Cloud/everywhere/notes
+code ~/Cloud/everywhere/notes/logs/$(date +%Y-%m-%d.md)

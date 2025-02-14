@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euxo pipefail
+
+
+/Applications/IINA.app/Contents/MacOS/iina-cli $*

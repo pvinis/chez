@@ -1,0 +1,10 @@
+
+# aliases
+alias f='fork'
+alias c='code . || code-insiders .'
+alias cl='clear'
+alias git='hub'
+alias oplogin='eval $(op signin my)'
+alias oploginartsy='eval $(op signin team_artsy)'
+alias lg='lazygit'
+

@@ -1,0 +1,56 @@
+[include]
+	path = config_local
+
+[merge]
+	ff = false
+
+[pull]
+	ff = true
+	twohead = ort
+
+[fetch]
+	prune = true
+	pruneTags = true
+
+[diff]
+	colorMoved = zebra
+
+[alias]
+	boc = reset HEAD~
+	pullu = pull upstream
+	pullf = !git fetch --all && git reset --hard "origin/$(git branch | grep \\* | cut -d ' ' -f2)"
+	wipsave = !git add -A && git commit -m "wip" && git push
+	wipload = !git pull && git boc && git push -f
+
+[credential]
+	helper = osxkeychain
+[user]
+	name = Pavlos Vinieratos
+	email = pvinis@gmail.com
+[commit]
+	gpgsign = true
+[github]
+	user = pvinis
+[diff "nodiff"]
+	command = true
+[status]
+	showUntrackedFiles = all
+
+[gpg]
+	program = gpg
+[core]
+	hooksPath = /Users/pavlos/.config/git/hooks
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[init]
+	defaultBranch = main
+[remote "origin"]
+	tagopt = --tags
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true

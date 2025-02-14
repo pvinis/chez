@@ -1,0 +1,114 @@
+{
+    "editor.accessibilitySupport": "off",
+    "editor.fontFamily": "Iosevka, SF Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.rulers": [
+        80,
+        100,
+        120
+    ],
+    "workbench.sideBar.location": "right",
+    "files.associations": {
+        "Pluginfile": "ruby",
+        "cheese.dat": "ledger",
+    },
+    "markdown.extension.toc.unorderedList.marker": "*",
+    "markdown.extension.toc.levels": "2..3",
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": true
+    },
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "search.mode": "newEditor",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[package-lock.json]": {
+        "editor.formatOnSave": false,
+    },
+    "vscode_custom_css.imports": [
+        // "file:///Users/pavlos/Desktop/synthwave-vscode.css"
+        // "file:///Users/pavlos/Desktop/custom-vscode.js",
+        // "file:///Users/pavlos/Desktop/custom-vscode.css"
+    ],
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "editor.formatOnSave": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "go.toolsManagement.autoUpdate": true,
+    "typescript.validate.enable": true,
+    "window.autoDetectColorScheme": true,
+    "cSpell.userWords": [
+        "addrs",
+        "browserslist",
+        "buidler",
+        "Checkmark",
+        "crossfit",
+        "driveby",
+        "ergodox",
+        "hrefs",
+        "iosevka",
+        "jank",
+        "jotai",
+        "nomiclabs",
+        "Pavlos",
+        "pvinis",
+        "roro",
+        "semibold",
+        "solhint",
+        "tailwindcss",
+        "truetype",
+        "typechain",
+        "Vinieratos"
+    ],
+    "editor.bracketPairColorization.enabled": true,
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.wrapTabs": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.packageManager": "yarn",
+    "eslint.run": "onSave",
+    "workbench.startupEditor": "none",
+    "vscode-pets.petSize": "large",
+    "vscode-pets.petColor": "black",
+    "vscode-pets.position": "explorer",
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "[solidity]": {
+        "editor.defaultFormatter": "JuanBlanco.solidity"
+    },
+    "solidity.compileUsingRemoteVersion": "v0.8.9+commit.e5eed63a",
+    "solidity.compileUsingLocalVersion": "./node_modules/solc/solcjs",
+    "solidity.defaultCompiler": "localNodeModule"
+}

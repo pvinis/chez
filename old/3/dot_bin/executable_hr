@@ -1,0 +1,16 @@
+#!/usr/bin/env bb -o
+
+;; This script takes $COLUMNS as first arg, and a string as second arg.
+;; It will spit out a string of `─`, for the length of `$COLUMNS - length(second arg)`.
+
+;; eg:
+;; $ ./hr 80 "Hello"
+;; this will print 75 `─`.
+
+
+(def columns (Integer/parseInt (first *command-line-args*)))
+(def printedChars (second *command-line-args*))
+
+(def restLength (- columns (count printedChars)))
+
+(clojure.string/join (repeat restLength "─"))

@@ -1,0 +1,46 @@
+#!/usr/bin/osascript -l JavaScript
+
+
+// Controls Spotify from cli
+
+
+function run(input, parameters) {
+	const spotify = Application('Spotify')
+
+	switch (input[0]) {
+		case 'playpause':
+			spotify.playpause()
+			break
+		case 'play':
+			spotify.play()
+			break
+		case 'pause':
+			spotify.pause()
+			break
+		case 'next':
+			spotify.nextTrack()
+			break
+		case 'previous':
+		case 'prev':
+			spotify.previousTrack()
+			break
+		case 'mute':
+			spotify.soundVolume = 0
+			break
+        case 'muteunmute':
+            if (spotify.soundVolume() === 0) {
+                spotify.soundVolume = 70
+            } else {
+                spotify.soundVolume = 0
+            }
+            break
+		case 'volup':
+			spotify.soundVolume = spotify.soundVolume() + 10
+			break
+		case 'voldown':
+			spotify.soundVolume = spotify.soundVolume() - 10
+			break
+		default:
+			break
+	}
+}

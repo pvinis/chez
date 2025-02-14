@@ -1,0 +1,12 @@
+# Fig SSH Integration: Enabled
+Include ~/.fig/ssh
+# End of Fig SSH Integration
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host 192.168.8.124
+  HostName 192.168.8.124
+  User pvinis

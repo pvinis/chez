@@ -1,0 +1,28 @@
+remote="$1"
+url="$2"
+
+z40=0000000000000000000000000000000000000000
+
+while read local_ref local_sha remote_ref remote_sha
+do
+	if [ "$remote_sha" = $z40 ]
+	then
+		# New branch, examine all commits
+		range="$local_sha"
+	else
+		# Update to existing branch, examine new commits
+		range="$remote_sha..$local_sha"
+	fi
+
+
+	echo =======+
+	echo $url > /tmp/pvinis-commits
+	git log --pretty=format:'%H::::%s' "$range" --author=pvinis --author="Pavlos Vinieratos" >> /tmp/pvinis-commits
+	cd ~/Source/pvinis/pvinis
+	./detector/index.js
+	cd -
+	echo =======-
+done
+
+
+$(git config core.hooksPath)/run-local-hook "pre-push"

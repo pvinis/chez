@@ -1,0 +1,14 @@
+#!/bin/sh
+mkdir -p /var/folders/cb/3mksb08n3g3c_qk4rtd7tl1m0000gq/T//firenvim
+chmod 700 /var/folders/cb/3mksb08n3g3c_qk4rtd7tl1m0000gq/T//firenvim
+cd /var/folders/cb/3mksb08n3g3c_qk4rtd7tl1m0000gq/T//firenvim
+export PATH="$PATH:/Users/pavlos/.asdf/shims:/usr/local/Cellar/asdf/0.8.1_1/libexec/bin:/Users/pavlos/.deno/bin:/Users/pavlos/.emacs.d/bin:/Users/pavlos/Source/contrib/incontext:/Users/pavlos/.config/yarn/global/node_modules/.bin:/Users/pavlos/.yarn/bin:/Users/pavlos/.fastlane/bin:/Users/pavlos/.bin:/usr/local/sbin:/Users/pavlos/.zinit/polaris/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/TeX/texbin:/usr/local/munki:/opt/X11/bin:/Library/Apple/usr/bin:/Users/pavlos/.fig/bin:/Users/pavlos/Library/Android/sdk/emulator:/Users/pavlos/Library/Android/sdk/tools:/Users/pavlos/Library/Android/sdk/tools/bin:/Users/pavlos/Library/Android/sdk/platform-tools"
+unset NVIM_LISTEN_ADDRESS
+if [ -n "$VIM" ] && [ ! -d "$VIM" ]; then
+  unset VIM
+fi
+if [ -n "$VIMRUNTIME" ] && [ ! -d "$VIMRUNTIME" ]; then
+  unset VIMRUNTIME
+fi
+
+exec '/usr/local/Cellar/neovim/0.5.1/bin/nvim' --headless --cmd 'let g:started_by_firenvim = v:true' -c 'call firenvim#run()'

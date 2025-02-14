@@ -1,0 +1,1 @@
+$(git config core.hooksPath)/run-local-hook "pre-applypatch"

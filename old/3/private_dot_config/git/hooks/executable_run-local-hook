@@ -1,0 +1,12 @@
+hookname="$1"
+
+# run the local hook too if it exists
+#echo "pvinis global gith hook will now run the local hook for $hookname"
+#echo "$PWD/.git/hooks/$hookname"
+if [ -x "$PWD/.git/hooks/$hookname" ];then
+	"$PWD/.git/hooks/$hookname"
+	exit $?
+else
+#	echo "no such hook"
+	exit 0
+fi
