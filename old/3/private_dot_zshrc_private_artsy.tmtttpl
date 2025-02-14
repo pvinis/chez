@@ -1,0 +1,13 @@
+export AWS_ACCESS_KEY_ID={ range (index (onepassword "aws credentials" "" "team_artsy").details.sections 1 "fields") -}}
+  { if eq .t "access key id" -}}
+    {{ .v }}
+  {{- end }}
+{- end }}
+export AWS_SECRET_ACCESS_KEY={ (onepassword "aws credentials" "" "team_artsy").details.password }}
+export AWS_DEFAULT_REGION=us-east-1
+
+# export BUNDLE_GITHUB__COM={ range (index (onepassword "GitHub (it@artsymail.com)" "" "team_artsy").details.sections 4 "fields") -}}
+  { if eq .t "Bundler Private Gem Token (also BUNDLE_GITHUB__COM)" -}}
+    { .v }}
+  {- end }}
+{- end }}

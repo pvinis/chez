@@ -1,6 +1,6 @@
-export HOMEBREW_GITHUB_API_TOKEN={{ (onepasswordDetailsFields "homebrew github api token").password.value }}
-export GITHUB_TOKEN={{ (onepasswordDetailsFields "github token").password.value }}
-export GH_TOKEN={{ (onepasswordDetailsFields "github token").password.value }}
+export HOMEBREW_GITHUB_API_TOKEN={ (onepasswordDetailsFields "homebrew github api token").password.value }}
+export GITHUB_TOKEN={ (onepasswordDetailsFields "github token").password.value }}
+export GH_TOKEN={ (onepasswordDetailsFields "github token").password.value }}
 
 [ -s "$HOME/.zshrc_private_artsy" ] && source $HOME/.zshrc_private_artsy
 [ -s "$HOME/.zshrc_private_sense" ] && source $HOME/.zshrc_private_sense

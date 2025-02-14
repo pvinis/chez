@@ -20,6 +20,8 @@ alias chu "chezmoi git pull -- --autostash --rebase && chezmoi diff"
 alias chU "chezmoi update"
 alias chr "chezmoi re-add"
 
+alias oplogin='eval $(op signin --account my)'
+
 
 set fish_greeting
 fish_vi_key_bindings

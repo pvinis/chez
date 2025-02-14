@@ -1,10 +1,10 @@
 github.com:
 - user: pvinis
   oauth_token: {{ if eq .chezmoi.hostname "cyan" -}}
-		{{ (onepassword "hub github token cyan" "" "my").details.password }}
+		{ (onepassword "hub github token cyan" "" "my").details.password }}
 	{{- else if eq .chezmoi.hostname "royal-purple" -}}
-		{{ (onepassword "hub github token royal-purple" "" "my").details.password }}
+		{ (onepassword "hub github token royal-purple" "" "my").details.password }}
 	{{- else if eq .chezmoi.hostname "lavender" -}}
-		{{ (onepassword "github hub token lavender" "" "my").details.password }}
+		{ (onepassword "github hub token lavender" "" "my").details.password }}
 	{{- end }}
   protocol: https

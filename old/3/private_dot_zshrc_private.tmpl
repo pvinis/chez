@@ -1,6 +1,6 @@
-export HOMEBREW_GITHUB_API_TOKEN="{{ (onepassword "homebrew github api token" "" "my").details.password }}"
-export GITHUB_TOKEN="{{ (onepassword "github hub token lavender" "" "my").details.password }}"
-export GH_TOKEN="{{ (onepassword "github hub token lavender" "" "my").details.password }}"
+export HOMEBREW_GITHUB_API_TOKEN={ (onepassword "homebrew github api token" "" "my").details.password }}"
+export GITHUB_TOKEN="{ (onepassword "github hub token lavender" "" "my").details.password }}"
+export GH_TOKEN="{ (onepassword "github hub token lavender" "" "my").details.password }}"
 
 [ -s "$HOME/.zshrc_private_artsy" ] && source $HOME/.zshrc_private_artsy
 [ -s "$HOME/.zshrc_private_sense" ] && source $HOME/.zshrc_private_sense
