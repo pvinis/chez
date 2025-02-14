@@ -13,6 +13,10 @@ alias bi "bun install"
 alias f fork
 alias pn pnpm
 alias px "pnpm dlx"
+alias ch chezmoi
+alias chc "chezmoi cd"
+alias chf "fork (chezmoi source-path)"
+
 
 set fish_greeting
 fish_vi_key_bindings
