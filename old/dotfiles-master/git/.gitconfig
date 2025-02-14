@@ -1,0 +1,29 @@
+[include]
+	path = .gitconfig_local
+
+[core]
+	editor = /usr/bin/vim
+	excludesfile = /Users/pvinis/.gitignore
+
+[merge]
+	ff = false
+
+[pull]
+	ff = true
+
+[diff]
+	colorMoved = zebra
+
+[alias]
+	boc = reset HEAD~
+	pullu = pull upstream
+	wipsave = !git add -A && git commit -m "wip" && git push
+	wipload = !git pull && git boc && git push -f
+
+[credential]
+	helper = osxkeychain
+[user]
+	name = Pavlos Vinieratos
+	email = pvinis@gmail.com
+[commit]
+	gpgsign = true
