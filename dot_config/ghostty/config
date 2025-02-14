@@ -1,0 +1,19 @@
+theme = dark:catppuccin-mocha,light:catppuccin-latte
+
+font-family = "Iosevka"
+font-size = 16
+
+# turn off all font features
+font-feature = -calt
+font-feature = -dlig
+font-feature = -liga
+
+# toggle_quick_terminal how to toggle it?
+
+
+# disabling the cursor auto-setting
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = false
+
+keybind = global:ctrl+super+shift+opt+y=toggle_quick_terminal
