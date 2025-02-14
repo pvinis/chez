@@ -16,6 +16,9 @@ alias px "pnpm dlx"
 alias ch chezmoi
 alias chc "chezmoi cd"
 alias chf "fork (chezmoi source-path)"
+alias chu "chezmoi git pull -- --autostash --rebase && chezmoi diff"
+alias chU "chezmoi update"
+alias chr "chezmoi re-add"
 
 
 set fish_greeting

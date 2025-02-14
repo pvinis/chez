@@ -1,0 +1,8 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
+set -euxo pipefail
+
+
+brew bundle
+
+{{ end -}}
