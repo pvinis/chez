@@ -4,7 +4,7 @@
         "host": "smtp.fastmail.com",
         "port": 587,
         "username": "pavlos@pvinis.com",
-        "password": {{ onepasswordRead "op://Private/reporter jason/password" }},
+        "password": "{{ onepasswordRead "op://Private/reporter jason/password" }}",
 
         "domain": "medium-blue.home.arpa",
         "timeout": 30,
