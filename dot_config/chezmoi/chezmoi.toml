@@ -2,6 +2,5 @@
 # autoPush = true
 
 [diff]
-  command = "ksdiff"
-  args = ["--partial-changeset"]
-
+format = "git"
+pager = "diff-so-fancy"

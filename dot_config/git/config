@@ -9,8 +9,14 @@
 [alias]
 	boc = reset HEAD~
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
+	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RF
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
