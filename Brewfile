@@ -11,6 +11,7 @@ brew "neovim"
 brew "fzf"
 brew "yt-dlp"
 brew "pvinis/pvinis/colortools"
+brew "mas"
 
 # brew "fortune"
 # brew "git-crypt"
@@ -37,6 +38,7 @@ cask "jordanbaird-ice"
 cask "raycast"
 cask "iterm2"
 cask "leader-key"
+cask "steermouse"
 cask "timemator"
 
 cask "zen-browser"
@@ -49,6 +51,7 @@ cask "viber"
 cask "skype"
 cask "slack"
 cask "zoom"
+cask "telegram-desktop"
 
 cask "xcodes"
 cask "appcleaner"
@@ -65,6 +68,8 @@ cask "figma"
 cask "around"
 cask "dbeaver-community"
 cask "another-redis-desktop-manager"
+
+cask "stremio"
 
 # cask "kopiaui"
 # cask "linear-linear"
@@ -87,3 +92,8 @@ cask "another-redis-desktop-manager"
 # cask "steam"
 # cask "stremio"
 # cask "transnomino"
+
+mas "TestFlight", id: 899247664
+mas "Things", id: 904280696
+mas "TV Time: Track Shows & Movies", id: 431065232
+
