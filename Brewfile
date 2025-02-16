@@ -4,6 +4,7 @@ brew "direnv"
 brew "zoxide"
 brew "gh"
 brew "git"
+brew "diff-so-fancy"
 brew "koekeishiya/formulae/skhd"
 
 brew "jq"
