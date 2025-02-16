@@ -1,2 +1,7 @@
 [git]
 # autoPush = true
+
+[diff]
+  command = "ksdiff"
+  args = ["--partial-changeset"]
+
