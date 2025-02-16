@@ -1,0 +1,68 @@
+// Empty
+[
+  {
+    "key": "cmd+r",
+    "command": "-workbench.action.reloadWindow",
+    "when": "isDevelopment"
+  },
+  {
+    "key": "cmd+r",
+    "command": "vscode-sonic-pi.run",
+    "when": "editorLangId == 'sonic-pi'"
+  },
+  {
+    "key": "alt+r",
+    "command": "-vscode-sonic-pi.run",
+    "when": "editorLangId == 'sonic-pi'"
+  },
+  {
+    "key": "cmd+.",
+    "command": "vscode-sonic-pi.stop",
+    "when": "editorLangId == 'sonic-pi'"
+  },
+  {
+    "key": "alt+s",
+    "command": "-vscode-sonic-pi.stop",
+    "when": "editorLangId == 'sonic-pi'"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "vscode-sonic-pi.togglerecording",
+    "when": "editorLangId == 'sonic-pi'"
+  },
+  {
+    "key": "shift+alt+r",
+    "command": "-vscode-sonic-pi.togglerecording",
+    "when": "editorLangId == 'sonic-pi'"
+  },
+  {
+    "key": "tab",
+    "command": "-markdown.extension.onTabKey",
+    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !suggestWidgetVisible && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+alt+.",
+    "command": "-paredit.slurpSexpForward",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+.",
+    "command": "owlbear.forwardSlurp",
+    "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadOnly && editorLangId in 'owlbear:supportedLanguages'"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "-owlbear.forwardSlurp",
+    "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadOnly && editorLangId in 'owlbear:supportedLanguages'"
+  },
+  {
+    "key": "ctrl+shift+,",
+    "command": "owlbear.forwardBarf",
+    "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadOnly && editorLangId in 'owlbear:supportedLanguages'"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "-owlbear.forwardBarf",
+    "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadOnly && editorLangId in 'owlbear:supportedLanguages'"
+  }
+]

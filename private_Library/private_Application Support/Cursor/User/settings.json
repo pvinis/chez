@@ -1,0 +1,183 @@
+{
+    "workbench.sideBar.location": "right",
+    "editor.fontFamily": "Iosevka, Monaspace Neon, monospace, Noto Sans Hebrew",
+    "editor.fontSize": 16,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vscode-pets.petSize": "medium",
+    "vscode-pets.petColor": "purple",
+    "git.autofetch": true,
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "githubPullRequests.pullBranch": "never",
+    "workbench.preferredLightColorTheme": "Catppuccin Latte",
+    "editor.fontLigatures": true,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+    "workbench.colorTheme": "Ayu Light",
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.test.ts",
+        "*.tsx": "${capture}.lazy.tsx"
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "workbench.editor.labelFormat": "short",
+    "todohighlight.keywords": [
+        "////",
+        {
+            "text": "TODO",
+            "color": "red",
+            "border": "1px solid red",
+            "borderRadius": "2px",
+            "backgroundColor": "rgba(0,0,0,.2)"
+        }
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "notebook.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "magit.forge-enabled": true,
+    "vscode-neovim.highlightGroups.highlights": {
+        "IncSearch": {
+            "backgroundColor": "theme.editor.findMatchBackground",
+            "borderColor": "theme.editor.findMatchBorder"
+        },
+        "Search": {
+            "backgroundColor": "theme.editor.findMatchHighlightBackground",
+            "borderColor": "theme.editor.findMatchHighlightBorder"
+        },
+        "Visual": {
+            "backgroundColor": "theme.editor.selectionBackground"
+        }
+    },
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode"
+    },
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.preferredHighContrastColorTheme": "Abyss",
+    "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+    "workbench.preferredHighContrastLightColorTheme": "Base16 Light Pop",
+    "base16.generator.activatedThemes": ["base16-default-dark", "sss"],
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "vscode-graphql.cacheSchemaFileForLookup": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[ruby]": {
+        "editor.defaultFormatter": "jnbt.vscode-rufo"
+    },
+    "evenBetterToml.semanticTokens": true,
+    "editor.semanticHighlighting.enabled": true,
+    "workbench.tree.enableStickyScroll": true,
+    "githubPullRequests.assignCreated": "${user}",
+    "githubPullRequests.notifications": "pullRequests",
+    "githubPullRequests.useReviewMode": {
+        "merged": true,
+        "closed": false
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": []
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "VSCodeNotion.api": "https://notion-api.splitbee.io",
+    "VSCodeNotion.accessToken": "v02%3Auser_token_or_cookies%3ArSLRrtWMVySV9bD6arPWodqG7wyRbXeWhTc2ap_tt_-tKUlpT6BH6YXaB6WJp8rU9lmuU9M_SjpXi7JLtHbLmcQ9HRzZdNHtlUFVP0O8T0lYerM5D_pjNKcVi-iUinYjoRT5",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.insertFinalNewline": true,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "tailwind-fold.foldStyle": "QUOTES",
+    "tailwind-fold.unfoldIfLineSelected": true,
+    "tailwind-fold.showTailwindImage": false,
+    "tailwind-fold.foldLengthThreshold": 5,
+    "tailwindCSS.experimental.classRegex": [
+        ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+        "tw`([^`]*)",
+        ["tw.style\\(([^)]*)\\)", "'([^']*)'"],
+        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+        ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ],
+    "tailwindCSS.classAttributes": [
+        "class",
+        "className",
+        "style",
+        "contentContainerStyle",
+        "columnWrapperStyle"
+    ],
+    "tailwind-fold.supportedLanguages": [
+        "html",
+        "typescriptreact",
+        "javascriptreact",
+        "typescript",
+        "javascript",
+        "vue-html",
+        "vue",
+        "php",
+        "markdown",
+        "coffeescript",
+        "svelte",
+        "astro"
+    ],
+    "github.copilot.editor.enableAutoCompletions": true,
+    "ReactNativeIDE.panelLocation": "tab",
+    "eslint.useFlatConfig": true,
+    "editor.accessibilitySupport": "off",
+    "todomd.defaultFile": "/Users/pvinis/Source/freelance/signatures/TODO.md",
+    "window.autoDetectColorScheme": true,
+    "catppuccin.accentColor": "lavender",
+    "catppuccin.italicComments": false,
+    "enableTelemetry": true,
+    "todomd.decorations": {
+        "completedTask": {
+            "backgroundColor": "#80e73c10",
+            "overviewRulerColor": "#80e73caa",
+            "gutterIconPath": "C:/icons/check.png",
+            "gutterIconSize": "20px"
+        }
+    },
+    "editor.formatOnSave": true,
+    "figma.autocompleteBlocks": true,
+    "esbonio.server.pythonPath": "/Users/pvinis/.local/share/mise/installs/python/3.12.2/bin/python",
+    "git.openRepositoryInParentFolders": "never",
+    "search.exclude": {
+        "**/.obsidian": true
+    },
+    "prisma.enableCodeLens": true,
+    "gitlens.advanced.messages": {
+        "suppressIntegrationRequestTimedOutWarning": true
+    },
+    "[lua]": {
+        "editor.defaultFormatter": "yinfei.luahelper"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cursor.cpp.disabledLanguages": ["plaintext", "scminput"]
+}
