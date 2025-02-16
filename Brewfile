@@ -98,3 +98,5 @@ mas "TestFlight", id: 899247664
 mas "Things", id: 904280696
 mas "TV Time: Track Shows & Movies", id: 431065232
 mas "Day Progress", id: 6450280202
+mas "TP-Link Tapo", id: 1472718009
+mas "TP-Link Deco", id: 1186159417
