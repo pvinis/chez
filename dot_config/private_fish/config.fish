@@ -2,9 +2,11 @@
 /opt/homebrew/bin/direnv hook fish | source
 zoxide init fish | source
 
+
 fish_add_path $HOME/.bin
 fish_add_path /opt/homebrew/sbin
 fish_add_path $HOME/.bun/bin
+fish_add_path /opt/whalebrew/bin
 
 
 alias b bun
@@ -39,6 +41,26 @@ function check_repo_reminder --on-variable PWD
         echo "⚠️🎥 time to stream your work!! 🎥⚠️"
         osascript -e 'display notification "⚠️🎥 time to stream your work!! 🎥⚠️" with title "purge work" sound name "Funk"'
     end
+end
+
+function upall
+    brew bundle
+    mise up
+    brew upgrade
+end
+
+function cleanall
+    brew cleanup
+    mise prune
+    yarn cache clean
+    # bun pm cache rm
+    pnpm store prune
+    npm cache clean --force
+    cargo cache -a
+    docker system prune -af
+    xcrun simctl delete unavailable
+    rm -rf ~/Library/Developer/Xcode/DerivedData
+    rm -rf ~/Library/Developer/Xcode/Archives
 end
 
 
