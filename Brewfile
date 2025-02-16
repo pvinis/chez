@@ -55,6 +55,7 @@ cask "telegram-desktop"
 
 cask "xcodes"
 cask "appcleaner"
+cask "kaleidoscope"
 cask "chatgpt"
 cask "daisydisk"
 cask "gimp"
