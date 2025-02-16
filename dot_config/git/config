@@ -1,0 +1,16 @@
+[diff "lockb"]
+	binary = true
+	textconv = bun
+[user]
+	email = pvinis@gmail.com
+	name = Pavlos Vinieratos
+[init]
+	defaultBranch = main
+[alias]
+	boc = reset HEAD~
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

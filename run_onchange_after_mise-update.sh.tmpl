@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euxo pipefail
+
+# This script is triggered by changes to mise.toml
+# {{ include "dot_config/mise/config.toml" | sha256sum }}
+
+mise up
