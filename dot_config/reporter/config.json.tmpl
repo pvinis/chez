@@ -1,0 +1,24 @@
+{
+    "mailServer": {
+
+        "host": "smtp.fastmail.com",
+        "port": 587,
+        "username": "pavlos@pvinis.com",
+        "password": {{ onepasswordRead "op://Private/reporter jason/password" }},
+
+        "domain": "medium-blue.home.arpa",
+        "timeout": 30,
+
+        "from": "bot@pavlos.com",
+        "to": "pavlos@pvinis.com"
+    },
+
+    "folders": {
+        "/Volumes/home-ex/pavlosx/Cloud/everywhere": {},
+        "/Volumes/home-ex/pavlosx/Cloud/paperwork": {},
+        "/Volumes/home-ex/pavlosx/Cloud/main-only": {},
+        "/Volumes/home-ex/pavlosx/Cloud/desktop-only": {},
+        "/Volumes/home-ex/pavlosx/Source": {},
+        "/Volumes/home-ex/pavlosx/Downloads": {}
+    }
+}
