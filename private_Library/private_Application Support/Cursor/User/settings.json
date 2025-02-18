@@ -170,7 +170,7 @@
     "cursor.cpp.disabledLanguages": ["plaintext", "scminput"],
     "window.commandCenter": 1,
     "workbench.colorTheme": "Catppuccin Latte",
-    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.iconTheme": "catppuccin-latte",
     "window.autoDetectColorScheme": true,
     "workbench.preferredLightColorTheme": "Catppuccin Latte",
     "workbench.preferredDarkColorTheme": "Catppuccin Mocha",

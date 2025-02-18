@@ -8,12 +8,6 @@
 	defaultBranch = main
 [alias]
 	boc = reset HEAD~
-[credential "https://github.com"]
-	helper =
-	helper = !/opt/homebrew/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper =
-	helper = !/opt/homebrew/bin/gh auth git-credential
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RF
 	attributesfile = /Users/pavlos/.gitattributes
@@ -23,3 +17,9 @@
 	ui = true
 [diff "plist"]
 	textconv = plutil -convert xml1 -o -
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
