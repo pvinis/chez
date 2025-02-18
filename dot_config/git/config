@@ -1,8 +1,8 @@
 [init]
 	defaultBranch = main
 [user]
-	email = pvinis@gmail.com
 	name = Pavlos Vinieratos
+	email = pvinis@gmail.com
 [alias]
 	boc = reset HEAD~
 [core]
@@ -18,8 +18,12 @@
 [diff "plist"]
 	textconv = plutil -convert xml1 -o -
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
+	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
+
+
+[includeIf "hasconfig:remote.*.url:https://github.com/Squads-Protocol/*"]
+	path = ~/.config/git/config-sqds
