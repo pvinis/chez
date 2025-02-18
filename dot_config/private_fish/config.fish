@@ -1,6 +1,7 @@
 /opt/homebrew/bin/mise activate fish | source
 /opt/homebrew/bin/direnv hook fish | source
 zoxide init fish | source
+thefuck --alias | source
 
 
 fish_add_path $HOME/.bin
