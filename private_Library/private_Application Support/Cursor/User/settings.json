@@ -136,7 +136,6 @@
         "astro"
     ],
     "github.copilot.editor.enableAutoCompletions": true,
-    "ReactNativeIDE.panelLocation": "tab",
     "eslint.useFlatConfig": true,
     "todomd.defaultFile": "/Users/pvinis/Source/freelance/signatures/TODO.md",
     "catppuccin.accentColor": "lavender",
@@ -170,7 +169,7 @@
     "cursor.cpp.disabledLanguages": ["plaintext", "scminput"],
     "window.commandCenter": 1,
     "workbench.colorTheme": "Catppuccin Latte",
-    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.iconTheme": "catppuccin-latte",
     "window.autoDetectColorScheme": true,
     "workbench.preferredLightColorTheme": "Catppuccin Latte",
     "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
@@ -200,5 +199,9 @@
     "rust-analyzer.diagnostics.experimental.enable": true,
     "[shellscript]": {
         "editor.defaultFormatter": "mkhl.shfmt"
-    }
+    },
+    "RadonIDE.panelLocation": "tab",
+    "vscode-postgres.prettyPrintJSONfields": true,
+    "vscode-postgres.defaultDatabase": "postgres",
+    "vscode-postgres.defaultConnection": "local db"
 }

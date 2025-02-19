@@ -3,6 +3,7 @@
 [user]
 	name = Pavlos Vinieratos
 	email = pvinis@gmail.com
+	signingkey = 723C26A1A52F8E10
 [alias]
 	boc = reset HEAD~
 [core]
@@ -23,7 +24,9 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
-
-
 [includeIf "hasconfig:remote.*.url:https://github.com/Squads-Protocol/*"]
 	path = ~/.config/git/config-sqds
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
