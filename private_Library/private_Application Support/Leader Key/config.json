@@ -1,60 +1,61 @@
 {
+  "type" : "group",
   "actions" : [
     {
       "type" : "application",
+      "key" : "t",
       "value" : "/Applications/iTerm.app",
-      "label" : "",
-      "key" : "t"
+      "label" : ""
     },
     {
       "key" : "o",
       "label" : "open",
+      "type" : "group",
       "actions" : [
         {
-          "key" : "b",
-          "label" : "",
           "value" : "/Applications/Zen Browser.app",
-          "type" : "application"
+          "type" : "application",
+          "label" : "",
+          "key" : "b"
         },
         {
           "key" : "m",
-          "type" : "application",
           "label" : "",
-          "value" : "/Applications/Beeper.app"
+          "value" : "/Applications/Beeper.app",
+          "type" : "application"
         },
         {
-          "type" : "application",
           "value" : "/Applications/Cursor.app",
           "key" : "e",
-          "label" : ""
+          "label" : "",
+          "type" : "application"
         }
-      ],
-      "type" : "group"
+      ]
     },
     {
-      "key" : "r",
       "actions" : [
         {
+          "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
           "label" : "",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
           "key" : "e"
         },
         {
           "key" : "p",
-          "type" : "url",
           "value" : "raycast://confetti",
-          "label" : ""
+          "label" : "",
+          "type" : "url"
         },
         {
-          "label" : "",
+          "type" : "url",
           "key" : "c",
           "value" : "raycast://extensions/raycast/system/open-camera",
-          "type" : "url"
+          "label" : ""
         }
       ],
+      "type" : "group",
       "label" : "raycast",
-      "type" : "group"
+      "key" : "r"
     },
     {
       "type" : "group",
@@ -62,50 +63,52 @@
         {
           "type" : "url",
           "key" : "e",
-          "label" : "max height",
-          "value" : "raycast://extensions/raycast/window-management/maximize-height"
+          "value" : "raycast://extensions/raycast/window-management/maximize-height",
+          "label" : "max height"
         },
         {
-          "label" : "left half",
-          "type" : "url",
           "value" : "raycast://extensions/raycast/window-management/left-half",
-          "key" : "a"
-        },
-        {
-          "value" : "raycast://extensions/raycast/window-management/right-half",
           "type" : "url",
-          "key" : "g",
-          "label" : "right half"
+          "key" : "a",
+          "label" : "left half"
         },
         {
-          "key" : "q",
+          "type" : "url",
+          "label" : "right half",
+          "value" : "raycast://extensions/raycast/window-management/right-half",
+          "key" : "g"
+        },
+        {
           "type" : "url",
           "value" : "raycast://extensions/raycast/window-management/next-display",
+          "key" : "q",
           "label" : "other screen"
         },
         {
-          "key" : "s",
+          "type" : "url",
           "label" : "left third",
           "value" : "raycast://extensions/raycast/window-management/first-third",
-          "type" : "url"
+          "key" : "s"
         }
       ],
       "key" : "w",
       "label" : "window mgmt"
     },
     {
+      "key" : "p",
       "type" : "group",
+      "label" : "extra",
       "actions" : [
         {
-          "key" : "n",
-          "label" : "gmeet new",
           "type" : "url",
-          "value" : "https://meet.google.com/new"
+          "value" : "https://meet.google.com/new",
+          "key" : "n",
+          "label" : "gmeet new"
         },
         {
           "key" : "m",
-          "value" : "https://meet.google.com/landing",
           "type" : "url",
+          "value" : "https://meet.google.com/landing",
           "label" : "gmeet landing"
         },
         {
@@ -114,29 +117,26 @@
           "label" : "",
           "type" : "command"
         }
-      ],
-      "label" : "extra",
-      "key" : "p"
+      ]
     },
     {
       "type" : "group",
+      "key" : "f",
       "actions" : [
         {
           "label" : "",
+          "type" : "folder",
           "key" : "p",
-          "value" : "/Volumes/home-ex/pavlosx/Cloud/paperwork",
-          "type" : "folder"
+          "value" : "/Users/pavlos/Cloud/paperwork"
         },
         {
           "type" : "folder",
           "key" : "a",
-          "value" : "/Volumes/home-ex/pavlosx/Cloud/paperwork/atomiki",
+          "value" : "/Users/pavlos/Cloud/paperwork/atomiki",
           "label" : ""
         }
       ],
-      "key" : "f",
       "label" : ""
     }
-  ],
-  "type" : "group"
+  ]
 }

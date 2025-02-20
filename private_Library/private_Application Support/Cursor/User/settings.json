@@ -180,7 +180,7 @@
     },
     "editor.codeActionsOnSave": {
         "source.fixAll.biome": "explicit",
-        "source.fixAll": "explicit"
+        "source.fixAll.eslint": "explicit"
     },
     "editor.accessibilitySupport": "off",
     "[rust]": {
