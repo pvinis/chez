@@ -16,6 +16,7 @@
 
 function run(input, parameters) {
 	const spotify = Application('Spotify')
+	const volumeFile = '/tmp/pvinis-spotify-ctl-volume'
 
 	switch (input[0]) {
 		case 'playpause':
@@ -37,13 +38,19 @@ function run(input, parameters) {
 		case 'mute':
 			spotify.soundVolume = 0
 			break
-        case 'muteunmute':
-            if (spotify.soundVolume() === 0) {
-                spotify.soundVolume = 70
-            } else {
-                spotify.soundVolume = 0
-            }
-            break
+		case 'muteunmute':
+			if (spotify.soundVolume() === 0) {
+				let prevVolume = 70
+				try {
+					prevVolume = parseInt($.NSString.stringWithContentsOfFile(volumeFile).js)
+				} catch(e) {}
+				spotify.soundVolume = prevVolume
+			} else {
+				$.NSString.alloc.initWithUTF8String(spotify.soundVolume().toString())
+					.writeToFileAtomically(volumeFile, true)
+				spotify.soundVolume = 0
+			}
+			break
 		case 'volup':
 			spotify.soundVolume = spotify.soundVolume() + 10
 			break
