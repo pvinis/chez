@@ -5,7 +5,7 @@ set -euxo pipefail
 # Shows a show
 
 
-open -a IINA.app ~/Cloud/main-only/AABD5A86-DA77-4A7E-8E32-E7C37AF3ED2D-8654-00000146AF14EA49.mov --args --mpv-mute --mpv-loop --mpv-speed=0.7
+open -a IINA.app ~/Cloud/main-only/zz/r/AABD5A86-DA77-4A7E-8E32-E7C37AF3ED2D-8654-00000146AF14EA49.mov --args --mpv-mute --mpv-loop --mpv-speed=0.7
 
 #  --keep-open                      Choices: no yes always (default: no)
 #  --video-scale-x                  Float (0 to 10000) (default: 1.000)
