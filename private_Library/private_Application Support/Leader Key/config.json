@@ -2,81 +2,81 @@
   "type" : "group",
   "actions" : [
     {
+      "label" : "",
       "type" : "application",
-      "key" : "t",
       "value" : "/Applications/iTerm.app",
-      "label" : ""
+      "key" : "t"
     },
     {
-      "key" : "o",
-      "label" : "open",
       "type" : "group",
+      "key" : "o",
       "actions" : [
         {
-          "value" : "/Applications/Zen Browser.app",
+          "key" : "b",
           "type" : "application",
-          "label" : "",
-          "key" : "b"
+          "value" : "/Applications/Zen Browser.app",
+          "label" : ""
         },
         {
+          "type" : "application",
           "key" : "m",
-          "label" : "",
           "value" : "/Applications/Beeper.app",
-          "type" : "application"
+          "label" : ""
         },
         {
           "value" : "/Applications/Cursor.app",
+          "type" : "application",
           "key" : "e",
-          "label" : "",
-          "type" : "application"
-        }
-      ]
-    },
-    {
-      "actions" : [
-        {
-          "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
-          "label" : "",
-          "type" : "url",
-          "key" : "e"
-        },
-        {
-          "key" : "p",
-          "value" : "raycast://confetti",
-          "label" : "",
-          "type" : "url"
-        },
-        {
-          "type" : "url",
-          "key" : "c",
-          "value" : "raycast://extensions/raycast/system/open-camera",
           "label" : ""
         }
       ],
-      "type" : "group",
-      "label" : "raycast",
-      "key" : "r"
+      "label" : "open"
     },
     {
-      "type" : "group",
       "actions" : [
         {
           "type" : "url",
           "key" : "e",
+          "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
+          "label" : ""
+        },
+        {
+          "value" : "raycast://confetti",
+          "label" : "",
+          "type" : "url",
+          "key" : "p"
+        },
+        {
+          "value" : "raycast://extensions/raycast/system/open-camera",
+          "key" : "c",
+          "label" : "",
+          "type" : "url"
+        }
+      ],
+      "label" : "raycast",
+      "key" : "r",
+      "type" : "group"
+    },
+    {
+      "key" : "w",
+      "actions" : [
+        {
           "value" : "raycast://extensions/raycast/window-management/maximize-height",
-          "label" : "max height"
+          "label" : "max height",
+          "key" : "e",
+          "type" : "url"
         },
         {
           "value" : "raycast://extensions/raycast/window-management/left-half",
-          "type" : "url",
           "key" : "a",
+          "type" : "url",
           "label" : "left half"
         },
         {
           "type" : "url",
-          "label" : "right half",
           "value" : "raycast://extensions/raycast/window-management/right-half",
-          "key" : "g"
+          "key" : "g",
+          "label" : "right half"
         },
         {
           "type" : "url",
@@ -85,57 +85,69 @@
           "label" : "other screen"
         },
         {
+          "value" : "raycast://extensions/raycast/window-management/first-third",
           "type" : "url",
           "label" : "left third",
-          "value" : "raycast://extensions/raycast/window-management/first-third",
           "key" : "s"
         }
       ],
-      "key" : "w",
+      "type" : "group",
       "label" : "window mgmt"
     },
     {
-      "key" : "p",
       "type" : "group",
+      "key" : "p",
       "label" : "extra",
       "actions" : [
         {
-          "type" : "url",
-          "value" : "https://meet.google.com/new",
           "key" : "n",
+          "value" : "https://meet.google.com/new",
+          "type" : "url",
           "label" : "gmeet new"
         },
         {
-          "key" : "m",
+          "label" : "gmeet landing",
           "type" : "url",
           "value" : "https://meet.google.com/landing",
-          "label" : "gmeet landing"
+          "key" : "m"
         },
         {
-          "value" : "shortcuts run \"led strip white light\"",
-          "key" : "w",
+          "type" : "command",
           "label" : "",
-          "type" : "command"
+          "value" : "shortcuts run \"led strip white light\"",
+          "key" : "w"
         }
       ]
     },
     {
-      "type" : "group",
       "key" : "f",
       "actions" : [
         {
           "label" : "",
+          "value" : "/Users/pavlos/Cloud/paperwork",
           "type" : "folder",
-          "key" : "p",
-          "value" : "/Users/pavlos/Cloud/paperwork"
+          "key" : "p"
         },
         {
-          "type" : "folder",
           "key" : "a",
-          "value" : "/Users/pavlos/Cloud/paperwork/atomiki",
-          "label" : ""
+          "type" : "folder",
+          "label" : "",
+          "value" : "/Users/pavlos/Cloud/paperwork/atomiki"
         }
       ],
+      "label" : "",
+      "type" : "group"
+    },
+    {
+      "type" : "application",
+      "key" : "c",
+      "value" : "/Applications/Cursor.app",
+      "label" : ""
+    },
+    {
+      "type" : "application",
+      "value" : "/Applications/Xcode-16.2.0.app/Contents/Developer/Applications/Simulator.app",
+      "key" : "i",
       "label" : ""
     }
   ]

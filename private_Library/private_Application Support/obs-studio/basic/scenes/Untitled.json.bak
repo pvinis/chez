@@ -127,5 +127,9 @@
             "switches": []
         }
     },
+    "resolution": {
+        "x": 1920,
+        "y": 1080
+    },
     "version": 2
 }

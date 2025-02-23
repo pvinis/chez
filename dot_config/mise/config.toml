@@ -1,6 +1,7 @@
 [tools]
 babashka = "1"
 bun = "1"
+deno = "2"
 lua = "5"
 node = "23"
 npm = "11"
