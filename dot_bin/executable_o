@@ -1,7 +1,9 @@
 #!/usr/bin/env deno run --allow-run
 
+
 // no args: open .
 // with args: open `args`
+
 
 import { exec } from "https://deno.land/x/exec/mod.ts";
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env deno run --allow-run
 
+// Tries to open an Xcode workspace or project, in the current directory or any subdirectory.
+
 import { exec, OutputMode } from "https://deno.land/x/exec/mod.ts";
 
 const openItAndExit = async (file) => {

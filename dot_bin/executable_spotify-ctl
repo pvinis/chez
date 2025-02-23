@@ -1,7 +1,17 @@
 #!/usr/bin/osascript -l JavaScript
 
 
-// Controls Spotify from cli
+// Controls Spotify from cli.
+//
+// Usage:
+// spotify-ctl playpause
+// spotify-ctl play
+// spotify-ctl pause
+// spotify-ctl next
+// spotify-ctl previous
+// spotify-ctl muteunmute
+// spotify-ctl volup
+// spotify-ctl voldown
 
 
 function run(input, parameters) {

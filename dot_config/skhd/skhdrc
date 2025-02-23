@@ -1,1 +1,9 @@
 hyper - n : open -a /Applications/Cursor.app ~/Cloud/everywhere/notes
+hyper - 1 : ~/.bin/spotify-ctl playpause
+hyper - 2 : ~/.bin/spotify-ctl next
+hyper - 3 : ~/.bin/spotify-ctl previous
+hyper - 4 : ~/.bin/spotify-ctl muteunmute
+hyper - 5 : ~/.bin/spotify-ctl volup
+hyper - 6 : ~/.bin/spotify-ctl voldown
+hyper - 7 : ~/.bin/nvd
+hyper - 8 : ~/.bin/show-the-roro
